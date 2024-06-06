@@ -15,7 +15,9 @@ namespace Auto_Parts.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.data = "Our Trending Products";
             return View();
+            
         }
 
         public IActionResult Privacy()
