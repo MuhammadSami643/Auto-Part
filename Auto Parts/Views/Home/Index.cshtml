@@ -5,6 +5,7 @@
     <title>Auto Parts</title>
 
     <style>
+
         header {
             background-color: black;
             color: #fff;
@@ -16,19 +17,19 @@
 
         h1 {
             color: green;
-            font-size: 24px;
             margin-left: 20px;
         }
 
         nav ul {
             list-style-type: none;
-            margin: 0;
-            padding: 0;
+            margin: 0 50px;
+            padding: 10px;
             display: flex;
         }
 
             nav ul li {
                 margin-right: 20px;
+                margin:0 20px;
             }
 
                 nav ul li a {
@@ -37,37 +38,152 @@
                 }
 
         .search-bar {
-            margin-right: 10px;
+            margin-left: 50px;
         }
 
-        .sign-in, .sign-up {
+        .sign-in {
             background-color: green;
-            color: black;
+            color: white;
+            margin-left:60px;
             padding: 10px 15px;
             border: none;
             border-radius: 40px;
             cursor: pointer;
             text-decoration: none;
         }
+
+        .sign-up {
+            background-color: green;
+            color: white;
+            margin-right:20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .products {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+            .products h1 {
+                margin-bottom: 30px;
+                font-size: 24px;
+                color: black;
+            }
+
+        .product-img {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            flex: 1;
+            max-width: 300px;
+            margin: 10px;
+        }
+
+            .product-img img {
+                max-width: 100%;
+                border-radius: 5px;
+                margin-bottom: 15px;
+            }
+
+            .product-img h3 {
+                font-size: 20px;
+                color: #333;
+                margin-bottom: 10px;
+            }
+
+            .product-img p {
+                color: #555;
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+
+            .product-img .price {
+                font-weight: bold;
+                color: green;
+                display: block;
+                margin-bottom: 15px;
+                font-size: 18px;
+            }
+            .p1{
+                display:flex;
+                margin:20px 150px;
+                align-items:center;
+            }
+
+        .p2 {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 150px;
+        }
+
     </style>
 </head>
+
+<header>
+    <h1>Auto Parts</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+    </div>
+    <a href="#" class="sign-in">Sign In</a>
+    <a href="#" class="sign-up">Sign Up</a>
+</header>
+
 <body>
-    <header>
-        <h1>Auto Parts</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
+    
+    <div class="products">
+        
+            <h1>Our Trending Products</h1>
+
+            <div class="p1">
+            <div class="product-img">
+                <img src="../images/ss.jpg" alt=" Customized Steering Wheel">
+                <h3>Steering Wheel</h3>
+                <span class="price">$59.99</span>
+            </div>
+            <div class="product-img">
+                <img src="../images/tyre.jpg" alt="Customized Tyres">
+                <h3>Steering Wheel</h3>
+                <span class="price">$159.99</span>
+            </div>
+            <div class="product-img">
+                <img src="../images/download.jpg" alt="Exhausters ">
+                <h3>Tyre</h3>
+                <span class="price">$49.99</span>
         </div>
-        <a href="#" class="sign-in">Sign In</a>
-        <a href="#" class="sign-up">Sign Up</a>
-    </header>
-</body>
+        </div>
+        <div class="p2">
+            <div class="product-img">
+                <img src="../images/bumper.jpg" alt="Bumper">
+                <h3>Steering Wheel</h3>
+                <span class="price">$39.99</span>
+            </div>
+            <div class="product-img">
+                <img src="../images/hl.jpg" alt="Head Light">
+                <h3>Steering Wheel</h3>
+                <span class="price">$9.99</span>
+            </div>
+            <div class="product-img">
+                <img src="../images/grille.jpg" alt="Grille">
+                <h3>Tyre</h3>
+                <span class="price">$29.99</span>
+            </div>
+        </div>
+    </div>
+
 </body>
