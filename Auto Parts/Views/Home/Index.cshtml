@@ -1,8 +1,73 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Auto Parts"] = "Home Page";
 }
+<head>
+    <title>Auto Parts</title>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <style>
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: green;
+            font-size: 24px;
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+            nav ul li {
+                margin-right: 20px;
+            }
+
+                nav ul li a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+        .search-bar {
+            margin-right: 10px;
+        }
+
+        .sign-in, .sign-up {
+            background-color: green;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Auto Parts</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <a href="#" class="sign-in">Sign In</a>
+        <a href="#" class="sign-up">Sign Up</a>
+    </header>
+</body>
+</body>
