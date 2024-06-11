@@ -5,8 +5,13 @@
     <title>Auto Parts</title>
 
     <style>
-
+        *{
+            margin:0;
+            padding:0;
+        }
         header {
+            margin-bottom:2px;
+            height:60px;
             background-color: black;
             color: #fff;
             padding: 10px;
@@ -65,6 +70,7 @@
         .front{
             background-image: url('../images/pngtree-3d-illustration-of-auto-components-spare-parts-and-accessories-image_3804414.jpg');
             height:250px;
+            margin-top:5px;
             margin:0;
             padding:0;
             background-repeat:no-repeat;
@@ -86,13 +92,11 @@
 
         .products {
             padding: 50px 0;
-            background-color: #f9f9f9;
         }
 
             .products h1 {
-                margin-bottom: 30px;
-                font-size: 24px;
-                color: black;
+                font-weight: bold;
+                color: green;
             }
 
         .product-img {
@@ -133,9 +137,9 @@
                 font-size: 18px;
             }
             .p1{
-                display:flex;
-                margin:20px 150px;
-                align-items:center;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 150px;
             }
 
         .p2 {
@@ -143,31 +147,116 @@
             justify-content: space-between;
             margin: 20px 150px;
         }
+
+        .service-img {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            flex: 1;
+            max-width: 300px;
+            margin: 10px;
+        }
+
+        .service-img img {
+                max-width: 100%;
+                border-radius: 5px;
+                margin-bottom: 15px;
+            }
+
+        .service-img h3 {
+                font-size: 20px;
+                color: #333;
+                margin-bottom: 10px;
+            }
+
+        .service-img p {
+                color: #555;
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+
+            .service-img .price {
+                font-weight: bold;
+                color: green;
+                display: block;
+                margin-bottom: 15px;
+                font-size: 18px;
+            }
+        .service h1{
+            font-weight: bold;
+            color: green;
+        
+        }
+
+        .s1 {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 50px;
+        }
+        .about{
+            align-items: center;
+            display: flex;
+            height:200px;
+            justify-content: space-between;
+            margin: 10px 250px;
+        }
+        .aboutus{
+            width:200px;
+            font-weight:bold;
+            color: green;
+        }
+
+        .abouttext{
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(5, 5, 5, 0.5);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            flex: 1;
+            max-width: 300px;
+            margin: 10px;
+
+        }
+
+        .contact{
+            align-items: center;
+            display: flex;
+            height: 200px;
+            justify-content: space-between;
+            margin: 10px 250px;
+        }
+
+        .contactus {
+            color:green;
+            font-weight: bold;
+            width: 200px;
+        }
+
+        .contacttext {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(5, 5, 5, 0.5);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            flex: 1;
+            max-width: 300px;
+            margin: 10px;
+        }
+
+
         .footer{
             background-color:black;
             color:white;
-        }
-        .footer1{
-            display:flex;
-            justify-content:center;
-        }
-        .about{
-            max-width:300px;
-            padding:10px;
+            height:80px;
+            align-items: center;
+            justify-content: center;
         }
 
-        .useful_link {
-           width: 200px;
-            padding: 10px;
-        }
-        .useful_link h2{
-            margin-left:10px;
-        }
-
-        .contacts {
-            padding: 10px;
-            max-width: 300px;
-        }
         .icon ul{
             list-style:none;
             align-items:center;
@@ -175,7 +264,7 @@
             display:flex;
         }
         .icon ul li{
-            margin:0 15px;
+            margin:10px 15px;
         }
         .copyright p{
             align-items: center;
@@ -186,15 +275,15 @@
     </style>
 </head>
 
-<header>
+<header id="HomeSection">
     <h1>Auto Parts</h1>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#HomeSection">Home</a></li>
+            <li><a href="#ProductSection">Products</a></li>
+            <li><a href="#ServiceSection">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
     <div class="search-bar">
@@ -204,28 +293,28 @@
     <a href="#" class="sign-up">Sign Up</a>
 </header>
 
-<body>
+<body class="content">
     
     <div class="front">
         <h1>Find Best Quality Parts Here</h1>
         <h2>Explore Our Wide Range Of Customized Parts</h2>
     </div>
-    <div class="products">
+    <div class="products" id="ProductSection">
         
             <h1>@ViewBag.data</h1>
 
             <div class="p1">
-            <div class="product-img">
+            <div class="product-img" id="steering">
                 <img src="../images/ss.jpg" alt=" Customized Steering Wheel">
                 <h3> Customized Steering Wheel</h3>
                 <span class="price">$59.99</span>
             </div>
-            <div class="product-img">
+            <div class="product-img" id="tyre">
                 <img src="../images/tyre.jpg" alt="Customized Tyres">
                 <h3>Customized Tyres</h3>
                 <span class="price">$159.99</span>
             </div>
-            <div class="product-img">
+            <div class="product-img" id="exhauster">
                 <img src="../images/download.jpg" alt="Exhausters ">
                 <h3>Exhausters</h3>
                 <span class="price">$49.99</span>
@@ -240,7 +329,7 @@
             <div class="product-img">
                 <img src="../images/hl.jpg" alt="Head Light">
                 <h3>Head Light</h3>
-                <span class="price">$9.99</span>
+                <span class="price">$19.99</span>
             </div>
             <div class="product-img">
                 <img src="../images/grille.jpg" alt="Grille">
@@ -250,33 +339,52 @@
         </div>
     </div>
 
+    <div class="service" id="ServiceSection">
+
+        <h1>@ViewData["service"]</h1>
+
+        <div class="s1">
+            <div class="service-img">
+                <img src="../images/carwash.jfif" alt=" Car Wash">
+                <h3> Car Wash</h3>
+                <span class="price">$9.99</span>
+            </div>
+            <div class="service-img">
+                <img src="../images/oil.jfif" alt="Oil">
+                <h3>Oil Change</h3>
+                <span class="price">$59.99</span>
+            </div>
+            <div class="service-img">
+                <img src="../images/polish.png" alt="Polish ">
+                <h3>Car Polish</h3>
+                <span class="price">$99.99</span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="about" id="about">
+        <div class="aboutus">
+            <h2>About Us</h2>
+        </div>
+        <div class="abouttext">
+            <p>Welcome to Mian Auto Parts, your ultimate destination for high-quality auto parts and accessories. At Mian Auto Parts, we are passionate about providing car enthusiasts and professionals with top-notch products to enhance your vehicle's' performance and appearance.</p>
+        </div>          
+        </div>
+
+    <div class="contact" id="contact">
+        
+        <div class="contacttext">
+            <p>Welcome to Mian Auto Parts, your ultimate destination for high-quality auto parts and accessories. At Mian Auto Parts, we are passionate about providing car enthusiasts and professionals with top-notch products to enhance your vehicle's' performance and appearance.</p>
+        </div>
+        <div class="contactus">
+            <h2>Contact Us</h2>
+        </div>
+    </div>
 
 </body>
 
 <footer>
     <div class="footer">
-        <div class="footer1">
-        <div class="about">
-            <h2>About Us</h2>
-            <p>Welcome to Mian Auto Parts, your ultimate destination for high-quality auto parts and accessories. At Mian Auto Parts, we are passionate about providing car enthusiasts and professionals with top-notch products to enhance your vehicle's' performance and appearance.</p>
-            </div>
-            <div class="useful_link">
-                <h2>Useful Link</h2>
-                <ul>
-                    <li><a href="#">Tyres</a></li>
-                    <li><a href="#">Steerings</a></li>
-                    <li><a href="#">Exhausters</a></li>
-                </ul>
-            </div>
-
-            <div class="contacts">
-                        <h2>Contact Us</h2>
-                <p>
-                    Have a question or need assistance? We're here to help! Contacting us at <a href="#">Mian Auto Parts</a> is easy and convenient. 
-
-                    You can reach us via email, phone or through our online contact form.</p>
-                    </div>
-        </div>
             <div class="icon">
                 <ul>
                     <li><a href="#"><img src="images/fb-icon.png"></a></li>
