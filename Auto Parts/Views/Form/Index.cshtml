@@ -1,0 +1,39 @@
+﻿@model List<Form>
+@{
+}
+
+<h2 class="text-center mb-5"> List of Entries</h2>
+
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" asp-controller="Form" asp-action="Create">Add User</a>
+
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var form in Model)
+        {
+        <td>@form.Name</td>
+        <td>@form.Email</td>
+        <td>@form.Age</td>
+        <td>@form.Password</td>
+        <a class="btn btn-primary btn-sm" asp-controller="Form" asp-action="Edit" asp-route-id="@form.Name">Edit</a>
+        <a class="btn btn-danger btn-sm" asp-controller="Form" asp-action="Delete" asp-route-id="@form.Name">Delete</a>
+        }
+    </tbody>
+
+</table>

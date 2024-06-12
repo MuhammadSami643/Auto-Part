@@ -271,6 +271,56 @@
             margin-left:450px;
         }
 
+        .sami{
+            background: white;
+            width: 500px;
+            margin: 55px auto;
+            padding: 20px;
+            border: 5px solid green;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 1.5);
+        }
+
+            .sami h2 {
+                font-size: 25px;
+                text-align: center;
+                padding: 24px;
+            }
+
+        .input-name {
+            width: 90%;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .name {
+            width: 45%;
+            padding: 8px 0px 8px 40px;
+        }
+
+        .text-name {
+            width:90%;
+            margin-right:20px;
+            padding: 8px 0px 8px 40px;
+        }
+
+        .new {
+            padding: 8px 8px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 8px 0px 8px 0px;
+            background: seagreen;
+            color: black;
+        }
+
+            .btn:hover {
+                background: lightgrey;
+            }
+
+        .abc {
+            margin-left: 20px;
+        }
 
     </style>
 </head>
@@ -284,13 +334,13 @@
             <li><a href="#ServiceSection">Services</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#contact">Contact Us</a></li>
-        </ul>
+            <li><a asp-area="" asp-controller="Form" asp-action="Index">Users</a></li>
     </nav>
     <div class="search-bar">
         <input type="text" placeholder="Search...">
     </div>
-    <a href="#" class="sign-in">Sign In</a>
-    <a href="#" class="sign-up">Sign Up</a>
+    <a href="#login" class="sign-in">Sign In</a>
+    <a href="#signup" class="sign-up">Sign Up</a>
 </header>
 
 <body class="content">
@@ -383,6 +433,56 @@
 
 </body>
 
+<div class="sami" id="signup">
+    <h2>Registration</h2>
+    <div class="form">
+        <form>
+            <div class="input-name" id="name">
+                <input type="text" placeholder="Your User Name" class="text-name">
+                
+            </div>
+            <div class="input-name" id="email">
+                <input type="email" placeholder="Enter email" class="text-name">
+            </div>
+            <div class="input-name" id="age">
+                <input type="number" placeholder="Enter Age" class="text-name">
+            </div>
+            <div class="input-name" id="password">
+                <input type="password" placeholder="Enter password" class="text-name">
+            </div>
+            
+                       
+            <div class="input-name">
+                <input type="checkbox">
+                <label>I agree with terms and conditions</label>
+            </div>
+            <div class="input-name">
+                <input type="button" value="Register Now" class="btn">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="sami" id="login">
+    <h2>LogIn</h2>
+    <div class="form">
+        <form>
+            <div class="input-name">
+                <input type="text" placeholder="Your Name or Email" class="text-name">
+
+            </div>
+            
+            <div class="input-name">
+                <input type="password" placeholder="Enter password" class="text-name">
+            </div>
+
+            <div class="input-name">
+                <input type="button" value="Login" class="btn">
+            </div>
+        </form>
+    </div>
+</div>
+
 <footer>
     <div class="footer">
             <div class="icon">
@@ -394,7 +494,7 @@
                 </ul>
             </div>
     <div class="copyright">
-            <p> &copy; Copyright 2024 All Right Reserved By <a href="https://mianautoparts/"> Mian Auto Parts</p>
+            <p> &copy; Copyright 2024 All Right Reserved By <a href="#HomeSection"> Mian Auto Parts</p>
         </div>
     </div>
 </footer>

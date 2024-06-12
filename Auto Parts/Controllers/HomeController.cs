@@ -18,14 +18,13 @@ namespace Auto_Parts.Controllers
             ViewBag.data = "Our Trending Products";
             ViewData["service"] = "Available Services ";
             return View();
-            
-
         }
-
+      
         public IActionResult Privacy()
         {
             return View();
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
