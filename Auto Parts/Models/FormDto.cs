@@ -4,7 +4,7 @@ namespace Auto_Parts.Models
 {
     public class FormDto
     {
-        public static string Name { get; internal set; }
+        public static string Name { get; set; }
         [Required]
         public Char Email { get; set; }
         [Required]
